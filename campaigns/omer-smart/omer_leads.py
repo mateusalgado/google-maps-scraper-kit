@@ -112,7 +112,7 @@ def run_city(city, queries, a):
     """Um job por cidade. Retorna as linhas brutas do CSV ou [] se falhar."""
     lat, lon = CITIES[city]
     max_time = max(900, 90 * len(queries) * a.depth // 3)
-    body = {"name": f"omer-{plain(city).replace(' ', '-')}", "keywords": queries, "lang": "pt-BR",
+    body = {"name": f"omer-{plain(city).replace(' ', '-')}", "keywords": queries, "lang": "pt",
             "zoom": 14, "lat": lat, "lon": lon, "radius": 15000, "fast_mode": False,
             "depth": a.depth, "email": False, "max_time": max_time}
     if a.proxy:
